@@ -1,0 +1,6 @@
+C:\Users\local167\Proyectos\CSharp\Prueba1\Prueba1\obj\Debug\Prueba1.csprojResolveAssemblyReference.cache
+C:\Users\local167\Proyectos\CSharp\Prueba1\Prueba1\bin\Debug\Prueba1.exe.config
+C:\Users\local167\Proyectos\CSharp\Prueba1\Prueba1\bin\Debug\Prueba1.exe
+C:\Users\local167\Proyectos\CSharp\Prueba1\Prueba1\bin\Debug\Prueba1.pdb
+C:\Users\local167\Proyectos\CSharp\Prueba1\Prueba1\obj\Debug\Prueba1.exe
+C:\Users\local167\Proyectos\CSharp\Prueba1\Prueba1\obj\Debug\Prueba1.pdb
