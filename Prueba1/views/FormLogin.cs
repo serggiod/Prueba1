@@ -6,6 +6,52 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
+
+/*
+
+Ejemplo de código fuente para implementar
+el diseño de un formulario en lenguaje WPF:xaml.
+
+<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="SDKSample.AWindow"
+    Title="Window with Button"
+    Width="250" Height="100">
+
+  <!-- Add button to window -->
+  <Button Name="button" Click="button_Click">Click Me!</Button>
+
+</Window>
+
+Ejemplo de código fuente para 
+la implementacón de Clases en C#
+con formulario diseñados en xaml.
+
+using System.Windows; // Window, RoutedEventArgs, MessageBox 
+
+namespace SDKSample
+{
+    public partial class AWindow : Window
+    {
+        public AWindow()
+        {
+            // InitializeComponent call is required to merge the UI 
+            // that is defined in markup with this class, including  
+            // setting properties and registering event handlers
+            InitializeComponent();
+        }
+
+        void button_Click(object sender, RoutedEventArgs e)
+        {
+            // Show message box when button is clicked
+            MessageBox.Show("Hello, Windows Presentation Foundation!");
+        }
+    }
+}
+
+
+*/
 using System;
 using System.Drawing;
 using System.Windows.Forms;

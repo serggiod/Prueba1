@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{C55BDEB3-3043-45EC-9FBD-7FF6BF5FDF9E}|Default">
+  <MonoDevelop.Ide.ItemProperties.Prueba1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Prueba1/views/FormLogin.cs">
+    <Files>
+      <File FileName="Prueba1/views/FormLogin.cs" Line="1" Column="1" />
+      <File FileName="Prueba1/Program.cs" Line="1" Column="1" />
+      <File FileName="Prueba1/views/FormMdi.cs" Line="9" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
