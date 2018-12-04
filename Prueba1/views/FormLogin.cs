@@ -117,12 +117,15 @@ namespace Prueba1.views
 			this.TxbUsr.Width = 200;
 			this.TxbUsr.TabIndex = 1;
 			this.TxbUsr.TextAlign = HorizontalAlignment.Center;
+            this.TxbUsr.MaxLength = 13;
 			this.TxbUsr.Focus();
 			
 			this.TxbPass.Location = new Point(this.TxbUsr.Location.X, this.TxbUsr.Location.Y +this.TxbUsr.Height + 3);
 			this.TxbPass.Width = 200;
 			this.TxbPass.TabIndex = 2;
 			this.TxbPass.TextAlign = HorizontalAlignment.Center;
+            this.TxbPass.MaxLength = 18;
+            this.TxbPass.PasswordChar = '*';
 			
 			this.BtnAcept.Location = new Point(this.TxbPass.Location.X +100, this.TxbPass.Location.Y +this.TxbPass.Height +3);
 			this.BtnAcept.Width = 100;
@@ -175,27 +178,25 @@ namespace Prueba1.views
 			this.Width = this.width;
 			this.Height = this.height;
 		}
-		
-		private void EventClick(Object s,EventArgs a)
-		{
-			this.LblAlert.Text = "ALERTA: Has hecho click en el botón aceptar.";
-			this.LblAlert.BackColor = Color.Yellow;
-		}
-		private void EventTxbUsrEnter(object s, EventArgs a)
+        private void EventTxbUsrEnter(object s, EventArgs a)
 		{
 			this.TxbUsr.Text = "";
-			//this.LblAlert.Text = "";
-			//this.LblAlert.BackColor = Color.Transparent;
-			this.LblAlert.Text = "INFO: Todos los campos son obligatorios.";
+            this.LblAlert.Text = "INFO: Todos los campos son obligatorios.";
 			this.LblAlert.BackColor = Color.SkyBlue;
 		}
 		private void EventTxbPassEnter(Object s,EventArgs a)
 		{
 			this.TxbPass.Text = "";
-			//this.LblAlert.Text = "";
-			//this.LblAlert.BackColor = Color.Transparent;
-			this.LblAlert.Text = "INFO: Todos los campos son obligatorios.";
+            this.LblAlert.Text = "INFO: Todos los campos son obligatorios.";
 			this.LblAlert.BackColor = Color.SkyBlue;
 		}
-	}
+        private void EventClick(Object s, EventArgs a)
+        {
+            if (this.TxbUsr.Text == "" || this.TxbPass.Text == "")
+            {
+                this.LblAlert.BackColor = Color.LightPink;
+                this.LblAlert.Text = "ERROR: Todos los campos son obligatorios.";
+            }
+        }
+    }
 }
