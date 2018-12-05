@@ -1,11 +1,27 @@
 ﻿<Properties StartupConfiguration="{C55BDEB3-3043-45EC-9FBD-7FF6BF5FDF9E}|Default">
   <MonoDevelop.Ide.ItemProperties.Prueba1 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Prueba1/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Prueba1/views/FormLogin.cs">
     <Files>
-      <File FileName="Prueba1/views/FormLogin.cs" Line="197" Column="42" />
-      <File FileName="Prueba1/Program.cs" Line="45" Column="27" />
+      <File FileName="Prueba1/views/FormLogin.cs" Line="194" Column="15" />
+      <File FileName="Prueba1/Program.cs" Line="31" Column="1" />
       <File FileName="Prueba1/views/FormMdi.cs" Line="9" Column="14" />
+      <File FileName="Prueba1/app.config" Line="7" Column="138" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Prueba1" expanded="True">
+            <Node name="Prueba1" expanded="True">
+              <Node name="References" expanded="True" selected="True">
+                <Node name="From Packages" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

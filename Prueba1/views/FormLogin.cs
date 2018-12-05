@@ -118,7 +118,7 @@ namespace Prueba1.views
 			this.TxbUsr.TabIndex = 1;
 			this.TxbUsr.TextAlign = HorizontalAlignment.Center;
             this.TxbUsr.MaxLength = 13;
-			this.TxbUsr.Focus();
+            this.TxbUsr.Focus();
 			
 			this.TxbPass.Location = new Point(this.TxbUsr.Location.X, this.TxbUsr.Location.Y +this.TxbUsr.Height + 3);
 			this.TxbPass.Width = 200;
@@ -163,17 +163,21 @@ namespace Prueba1.views
 			this.Move += this.EventMove;
 			this.Resize += this.EventResize;
 			this.BtnAcept.Click += this.EventClick;
-			this.TxbUsr.Enter += this.EventTxbUsrEnter;
-			this.TxbPass.Enter += this.EventTxbPassEnter;
+			
+            this.TxbUsr.Enter += this.EventTxbUsrEnter;
+            this.TxbUsr.KeyPress += this.EventTxbUsrKeyPress;
+			
+            this.TxbPass.Enter += this.EventTxbPassEnter;
+            this.TxbPass.KeyPress += this.EventTxbPassKeyPress;
 			
 		}
 		
-		private void EventMove(Object s,EventArgs a)
+		private void EventMove(Object s, EventArgs a)
 		{
 			this.Location = this.StartLocation;
 		}
 		
-		private void EventResize(Object s,EventArgs a)
+		private void EventResize(Object s, EventArgs a)
 		{
 			this.Width = this.width;
 			this.Height = this.height;
@@ -184,12 +188,21 @@ namespace Prueba1.views
             this.LblAlert.Text = "INFO: Todos los campos son obligatorios.";
 			this.LblAlert.BackColor = Color.SkyBlue;
 		}
-		private void EventTxbPassEnter(Object s,EventArgs a)
+        private void EventTxbUsrKeyPress(Object s, KeyPressEventArgs a)
+        {
+
+            //if(char.IsControl() || char.Is
+        }
+		private void EventTxbPassEnter(Object s, EventArgs a)
 		{
 			this.TxbPass.Text = "";
             this.LblAlert.Text = "INFO: Todos los campos son obligatorios.";
 			this.LblAlert.BackColor = Color.SkyBlue;
 		}
+        private void EventTxbPassKeyPress(Object s, KeyPressEventArgs a)
+        {
+        
+        }
         private void EventClick(Object s, EventArgs a)
         {
             if (this.TxbUsr.Text == "" || this.TxbPass.Text == "")
