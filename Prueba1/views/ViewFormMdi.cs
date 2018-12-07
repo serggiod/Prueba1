@@ -9,28 +9,23 @@
 using System;
 using System.Windows.Forms;
 using Prueba1.views;
+using Prueba1.controllers;
 
 namespace Prueba1.views
 {
 
-	public class FormMdi : Form
+	public class ViewFormMdi : ControllerFormMdi
 	{
-		public FormMdi()
+		public ViewFormMdi()
 		{
-
-			this.Text = "Aplicación";
+            this.Text = "Aplicación";
 			this.IsMdiContainer = true;
 			this.WindowState = FormWindowState.Maximized;
 
-			// Eventos.
-			this.Shown += EventShown;
-			
-		}
-		
-		private void EventShown(Object s,EventArgs a)
-		{
-			var FormLogin = new FormLogin(this);
-			FormLogin.Show();
-		}
-	}
+            // Eventos.
+            var FormLogin = new ViewFormLogin();
+            FormLogin.Parent = this;
+            FormLogin.Show();
+        }
+    }
 }

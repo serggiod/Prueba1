@@ -10,6 +10,7 @@
     <AssemblyName>Prueba1</AssemblyName>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <TargetFrameworkProfile />
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -31,10 +32,10 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <LangVersion>5</LangVersion>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <LangVersion>5</LangVersion>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp">
@@ -50,9 +51,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
     </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -61,14 +59,21 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="Google.Protobuf">
-      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="views\FormLogin.cs" />
-    <Compile Include="views\FormMdi.cs" />
+    <Compile Include="controllers\ControllerFormLogin.cs" />
+    <Compile Include="controllers\ControllerFormMdi.cs" />
+    <Compile Include="views\ViewFormLogin.cs" />
+    <Compile Include="views\ViewFormMdi.cs" />
+    <Compile Include="models\ModelFormLogin.cs" />
+    <Compile Include="models\ModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -76,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="views" />
+    <Folder Include="controllers\" />
+    <Folder Include="views\" />
+    <Folder Include="models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

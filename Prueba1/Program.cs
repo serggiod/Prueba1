@@ -9,7 +9,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using Prueba1.views;
 
 namespace Prueba1
@@ -21,25 +21,11 @@ namespace Prueba1
 		[STAThread]
 		private static void Main(string[] args)
 		{
-			var formm = new FormMdi();
-
-            MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["mysql"].ConnectionString;
-            con.Open();
-
-            //MySqlCommand mycmd = new MySqlCommand("select * from boletin", con);
-
-            //MySqlDataReader result = mycmd.ExecuteReader();
-
-            //while (result.Read()) Console.WriteLine("Resultado: user: " + result["bol_num"].ToString() + " y host:" + result["bol_ani"].ToString());
-
-            //result.Close();
-            //mycmd.Dispose();
-            con.Close();
+			var formm = new ViewFormMdi();
 
 			Application.EnableVisualStyles();
-			
-			Application.Run(formm);
+            Application.Run(formm);
+
 		}
 
     }
