@@ -1,14 +1,11 @@
 ﻿<Properties StartupConfiguration="{C55BDEB3-3043-45EC-9FBD-7FF6BF5FDF9E}|Default">
   <MonoDevelop.Ide.ItemProperties.Prueba1 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Prueba1/models/ModelBase.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Prueba1/classes/ClassDB.cs">
     <Files>
-      <File FileName="Prueba1/Program.cs" Line="26" Column="1" />
-      <File FileName="Prueba1/views/ViewFormLogin.cs" Line="4" Column="27" />
-      <File FileName="Prueba1/views/ViewFormMdi.cs" Line="27" Column="23" />
-      <File FileName="Prueba1/controllers/ControllerFormLogin.cs" Line="56" Column="21" />
-      <File FileName="Prueba1/models/ModelFormLogin.cs" Line="38" Column="25" NotebookId="1" />
-      <File FileName="Prueba1/models/ModelBase.cs" Line="19" Column="25" NotebookId="1" />
-      <File FileName="Prueba1/app.config" Line="7" Column="1" NotebookId="1" />
+      <File FileName="Prueba1/controllers/ControllerFormLogin.cs" Line="19" Column="40" />
+      <File FileName="Prueba1/models/ModelFormLogin.cs" Line="9" Column="8" />
+      <File FileName="Prueba1/app.config" Line="7" Column="97" />
+      <File FileName="Prueba1/classes/ClassDB.cs" Line="101" Column="75" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

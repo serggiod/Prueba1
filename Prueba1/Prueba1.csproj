@@ -73,7 +73,7 @@
     <Compile Include="views\ViewFormLogin.cs" />
     <Compile Include="views\ViewFormMdi.cs" />
     <Compile Include="models\ModelFormLogin.cs" />
-    <Compile Include="models\ModelBase.cs" />
+    <Compile Include="classes\ClassDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -84,6 +84,7 @@
     <Folder Include="controllers\" />
     <Folder Include="views\" />
     <Folder Include="models\" />
+    <Folder Include="classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

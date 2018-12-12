@@ -14,6 +14,21 @@ namespace Prueba1.views
             Image ikeyg = Image.FromFile("imgs/key.png");
             Image iaccept = Image.FromFile("./icons/accept.png");
 
+            // Form
+            var screen = Screen.PrimaryScreen.WorkingArea;
+            var x = (screen.Width / 2) - (this.Width / 2);
+            var y = (screen.Height / 2) - (this.Height / 2);
+
+            this.Text = "Autenticar";
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+            this.ControlBox = false;
+            this.StartLocation.X = x;
+            this.StartLocation.Y = y;
+            this.Location = this.StartLocation;
+            this.AcceptButton = this.BtnAcept;
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+
             //Propiedades.
             this.LblTitle.Location = new Point(0, 0);
             this.LblTitle.Width = 400;
@@ -32,15 +47,15 @@ namespace Prueba1.views
             this.LblAlert.TextAlign = ContentAlignment.MiddleCenter;
             this.LblAlert.BackColor = Color.SkyBlue;
 
-            this.lblUsr.Location = new Point(35, this.LblAlert.Location.Y + LblAlert.Height + 3);
-            this.lblUsr.Text = "Usuario:";
-            this.lblUsr.Width = 100;
+            this.LblUsr.Location = new Point(35, this.LblAlert.Location.Y + LblAlert.Height + 3);
+            this.LblUsr.Text = "Usuario:";
+            this.LblUsr.Width = 100;
 
-            this.LblPass.Location = new Point(35, this.lblUsr.Location.Y + this.lblUsr.Height + 3);
+            this.LblPass.Location = new Point(35, this.LblUsr.Location.Y + this.LblUsr.Height + 3);
             this.LblPass.Text = "Passowd:";
-            this.lblUsr.Width = 100;
+            this.LblUsr.Width = 100;
 
-            this.TxbUsr.Location = new Point(this.lblUsr.Location.X + this.lblUsr.Width + 10, this.lblUsr.Location.Y);
+            this.TxbUsr.Location = new Point(this.LblUsr.Location.X + this.LblUsr.Width + 10, this.LblUsr.Location.Y);
             this.TxbUsr.Width = 200;
             this.TxbUsr.TabIndex = 1;
             this.TxbUsr.TextAlign = HorizontalAlignment.Center;
@@ -64,32 +79,6 @@ namespace Prueba1.views
             this.BtnAcept.TextAlign = ContentAlignment.MiddleRight;
             this.BtnAcept.Image = iaccept;
             this.BtnAcept.ImageAlign = ContentAlignment.MiddleLeft;
-
-            // Form
-            var screen = Screen.PrimaryScreen.WorkingArea;
-            var x = (screen.Width / 2) - (this.width / 2);
-            var y = (screen.Height / 2) - (this.height / 2);
-
-            this.Width = this.width;
-            this.Height = this.height;
-            this.Text = "Autenticar";
-            //this.Icon = iconApp;
-            this.MinimizeBox = false;
-            this.MaximizeBox = false;
-            this.ControlBox = false;
-            this.StartLocation.X = x;
-            this.StartLocation.Y = y;
-            this.Location = this.StartLocation;
-            this.AcceptButton = this.BtnAcept;
-
-            // Controls.
-            this.Controls.Add(this.LblTitle);
-            this.Controls.Add(this.LblAlert);
-            this.Controls.Add(this.lblUsr);
-            this.Controls.Add(this.LblPass);
-            this.Controls.Add(this.TxbUsr);
-            this.Controls.Add(this.TxbPass);
-            this.Controls.Add(this.BtnAcept);
         }
     }
 }

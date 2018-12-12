@@ -1,8 +1,9 @@
 ﻿using System;
+using Prueba1.classes;
 
 namespace Prueba1.models
 {
-    public class ModelFormLogin : ModelBase
+    public class ModelFormLogin : ClassDB
     {
         private string nombre;
         private string apellido;
@@ -23,26 +24,25 @@ namespace Prueba1.models
             this.estado = 1;
         }
 
-        private bool login()
+        protected bool login()
         {
             return true;
         }
 
-        private bool logout()
+        protected bool logout()
         {
             return true;
         }
 
-        private bool session()
+        protected bool session()
         {
             return true;
         }
 
-        private void session_start()
+        protected void session_start()
         { }
 
-        private void session_destroy()
+        protected void session_destroy()
         { }
-
     }
 }
