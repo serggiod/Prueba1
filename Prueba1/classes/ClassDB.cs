@@ -1,12 +1,13 @@
-﻿using System.Configuration;
+﻿using System.Windows.Forms;
+using System.Data;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace Prueba1.classes
 {
     public class ClassDB
     {
         MySqlConnection Connection;
-
         public ClassDB()
         {
             string c = "Server=localhost;Database=test;User ID=test;Pwd=test;";
@@ -15,10 +16,11 @@ namespace Prueba1.classes
 
         public bool Open()
         {
+            bool r = false;
             try
             {
                 this.Connection.Open();
-                return true;
+                r = true;
             }
             catch (MySqlException e)
             {
@@ -32,8 +34,10 @@ namespace Prueba1.classes
                         MessageBox.Show("Error en el usuario o el password.");
                         break;
                 }
-                return false;
+                r = false;
             }
+
+            return r;
 
         }
 
@@ -62,6 +66,7 @@ namespace Prueba1.classes
                 cmd.ExecuteNonQuery();
                 return this.Close();
             }
+            else return false;
         }
 
         public bool Update(string q)
@@ -74,6 +79,7 @@ namespace Prueba1.classes
                 cmd.ExecuteNonQuery();
                 return this.Close();
             }
+            else return false;
         }
 
         public bool Delete(string q)
@@ -86,10 +92,21 @@ namespace Prueba1.classes
                 cmd.ExecuteNonQuery();
                 return this.Close();
             }
+            else return false;
         }
 
-        public List <string> [] Select(string q)
+        public DataTable Select(string q, string n, string[] f)
         {
+            DataTable table = new DataTable(n);
+
+            for(int i=0; i<f.Length; i++)
+            {
+                DataColumn column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = f[i];
+                table.Columns.Add(column);
+            }
+
             if (this.Open() == true)
             {
                 MySqlCommand cmd = new MySqlCommand();
@@ -97,49 +114,20 @@ namespace Prueba1.classes
                 cmd.Connection = this.Connection;
 
                 MySqlDataReader reader = cmd.ExecuteReader();
-
-                List<string>[] list = new List<string>[reader.FieldCount];
-                /*
-string query = "SELECT * FROM tableinfo";
-
-    //Create a list to store the result
-    List< string >[] list = new List< string >[3];
-    list[0] = new List< string >();
-    list[1] = new List< string >();
-    list[2] = new List< string >();
-
-    //Open connection
-    if (this.OpenConnection() == true)
-    {
-        //Create Command
-        MySqlCommand cmd = new MySqlCommand(query, connection);
-        //Create a data reader and Execute the command
-        MySqlDataReader dataReader = cmd.ExecuteReader();
-        
-        //Read the data and store them in the list
-        while (dataReader.Read())
-        {
-            list[0].Add(dataReader["id"] + "");
-            list[1].Add(dataReader["name"] + "");
-            list[2].Add(dataReader["age"] + "");
-        }
-
-        //close Data Reader
-        dataReader.Close();
-
-        //close Connection
-        this.CloseConnection();
-
-        //return list to be displayed
-        return list;
-    }
-    else
-    {
-        return list;
-    }               
-                */
+                while (reader.Read())
+                {
+                    DataRow row = table.NewRow();
+                    for (int i = 0; i < f.Length; i++) row[f[i]] = reader.GetString(i);
+                    table.Rows.Add(row);
+                }
+                reader.Dispose();
+                 
+                this.Connection.Close();
 
             }
+
+            return table;
         }
+
     }
 }

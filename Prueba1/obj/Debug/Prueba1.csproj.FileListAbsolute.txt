@@ -16,3 +16,15 @@ C:/Users/local167/Proyectos/CSharp/Prueba1/Prueba1/obj/Debug/Prueba1.pdb
 /home/sdominguez/Proyectos/Csharp/Prueba1/Prueba1/bin/Debug/Google.Protobuf.xml
 /home/sdominguez/Proyectos/Csharp/Prueba1/Prueba1/bin/Debug/MySql.Data.xml
 /home/sdominguez/Proyectos/Csharp/Prueba1/Prueba1/obj/Debug/Prueba1.csproj.CopyComplete
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\obj\Debug\Prueba1.csprojAssemblyReference.cache
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\obj\Debug\Prueba1.csproj.CoreCompileInputs.cache
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\obj\Debug\Prueba1.exe
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\obj\Debug\Prueba1.pdb
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\bin\Debug\Prueba1.exe.config
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\bin\Debug\Prueba1.exe
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\bin\Debug\Prueba1.pdb
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\bin\Debug\Google.Protobuf.dll
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\bin\Debug\MySql.Data.dll
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\bin\Debug\Google.Protobuf.xml
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\bin\Debug\MySql.Data.xml
+C:\Users\Sergio Dominguez\Proyectos\C#\Prueba1\Prueba1\obj\Debug\Prueba1.csproj.CopyComplete
