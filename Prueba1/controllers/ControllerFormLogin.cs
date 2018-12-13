@@ -91,7 +91,7 @@ namespace Prueba1.controllers
             }
             else
             {
-                Regex regc = new Regex("\\d{2}-\\d{7,8}-\\d{1}");
+                /*Regex regc = new Regex("\\d{2}-\\d{7,8}-\\d{1}");
                 Regex regp = new Regex("(\\d\\w){8,18}");
 
                 MatchCollection mcregc = regc.Matches(this.TxbUsr.Text);
@@ -102,7 +102,13 @@ namespace Prueba1.controllers
                 {
                     this.LblAlert.BackColor = Color.LightPink;
                     this.LblAlert.Text = "ERROR: El usuario o el password son incorrectos.";
-                }
+                }*/
+                this.Model.SetCuil(this.TxbUsr.Text);
+                this.Model.SetPassword(this.TxbPass.Text);
+
+                if (this.Model.Login() == true) MessageBox.Show("Te has logueado.");
+                else MessageBox.Show("No te has logueado.");
+
             }
         }
         private void EventClose(Object s, FormClosingEventArgs e)
