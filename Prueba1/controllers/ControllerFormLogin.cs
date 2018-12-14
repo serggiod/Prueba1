@@ -91,24 +91,33 @@ namespace Prueba1.controllers
             }
             else
             {
-                /*Regex regc = new Regex("\\d{2}-\\d{7,8}-\\d{1}");
-                Regex regp = new Regex("(\\d\\w){8,18}");
-
-                MatchCollection mcregc = regc.Matches(this.TxbUsr.Text);
-                MatchCollection mcregp = regp.Matches(this.TxbPass.Text);
-
-                if (mcregc.Count > 0 && mcregp.Count > 0) this.Close();
-                else
+                string pass = this.Model.ToMD5(this.TxbPass.Text);
+                if (string.IsNullOrEmpty(pass) || pass == "d41d8cd98f00b204e9800998ecf8427e")
                 {
                     this.LblAlert.BackColor = Color.LightPink;
-                    this.LblAlert.Text = "ERROR: El usuario o el password son incorrectos.";
-                }*/
-                this.Model.SetCuil(this.TxbUsr.Text);
-                this.Model.SetPassword(this.TxbPass.Text);
+                    this.LblAlert.Text = "ERROR: El usuario o el passoword son incoreectos.";
+                }
+                else
+                {
+                    this.Model.SetCuil(this.TxbUsr.Text);
+                    this.Model.SetPassword(this.TxbPass.Text);
 
-                if (this.Model.Login() == true) MessageBox.Show("Te has logueado.");
-                else MessageBox.Show("No te has logueado.");
+                    if (this.Model.Login() == true)
+                    {
+                        abernis@legislaturajujuy.gov.ar
+                        Console.WriteLine("Te has logueado.");
+                        this.LblAlert.BackColor = Color.LightGreen;
+                        this.LblAlert.Text = "OK: El usuario se ha logueado en el systema.";
+                    }
 
+                    else
+                    {
+                        Console.WriteLine("No te has logueado."); 
+                        this.LblAlert.BackColor = Color.LightPink;
+                        this.LblAlert.Text = "ERROR: El usuario o el passoword son incoreectos.";
+                    }
+
+                }
             }
         }
         private void EventClose(Object s, FormClosingEventArgs e)

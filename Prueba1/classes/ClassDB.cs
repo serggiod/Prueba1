@@ -1,7 +1,9 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using System.Data;
 using MySql.Data.MySqlClient;
-using System;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Prueba1.classes
 {
@@ -10,8 +12,8 @@ namespace Prueba1.classes
         MySqlConnection Connection;
         public ClassDB()
         {
-            string c = "Server=localhost;Database=test;User ID=test;Pwd=test;";
-            this.Connection = new MySqlConnection(c);
+            string s = "Server=127.0.0.1; database=test; UID=test; password=test;";
+            this.Connection = new MySqlConnection(s);
         }
 
         public bool Open()
@@ -27,11 +29,11 @@ namespace Prueba1.classes
                 switch (e.Number)
                 {
                     case 0:
-                        MessageBox.Show("No se puede conectar al servidor.");
+                        Console.WriteLine("ERROR: No se puede conectar al servidor.");
                         break;
 
                     case 1045:
-                        MessageBox.Show("Error en el usuario o el password.");
+                        Console.WriteLine("ERROR: Error en el usuario o el password.");
                         break;
                 }
                 r = false;
@@ -51,7 +53,7 @@ namespace Prueba1.classes
 
             catch (MySqlException e)
             {
-                MessageBox.Show(e.Message);
+                Console.WriteLine(e.Message);
                 return false;
             }
         }
@@ -129,5 +131,28 @@ namespace Prueba1.classes
             return table;
         }
 
+        public string ToMD5(string s)
+        {
+            string r = string.Empty;
+
+            if (this.Open())
+            {
+                string q = string.Empty;
+                q += "SELECT ";
+                q += " MD5('" + s + "') AS md5";
+
+                MySqlCommand cmd = new MySqlCommand(q,this.Connection);
+                cmd.CommandText = q;
+                cmd.Connection = this.Connection;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read()) r = reader["md5"].ToString();
+                reader.Dispose();
+
+                this.Close();
+            }
+
+            return r;
+        }
     }
 }

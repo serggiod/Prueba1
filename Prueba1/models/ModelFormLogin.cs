@@ -14,17 +14,19 @@ namespace Prueba1.models
         private string modulon;
         private string modulod;
         private int estado;
+        public bool loggedin;
 
         public ModelFormLogin()
         {
-            this.nombre = "";
-            this.apellido = "";
-            this.cuil = "";
-            this.password = "";
+            this.nombre = string.Empty;
+            this.apellido = string.Empty;
+            this.cuil = string.Empty;
+            this.password = string.Empty;
             this.modulel = "admindds";
-            this.modulon = "";
-            this.modulod = "";
+            this.modulon = string.Empty;
+            this.modulod = string.Empty;
             this.estado = 1;
+            this.loggedin = false;
         }
 
         public void SetCuil(string c)
@@ -41,7 +43,7 @@ namespace Prueba1.models
         {
             bool r = false;
 
-            string q = ""; 
+            string q = string.Empty; 
             q += "SELECT ";
             q += " jp.per_nombres nombre, ";
             q += " jp.per_apellidos apellido, ";
@@ -71,9 +73,17 @@ namespace Prueba1.models
                 "modulod"
             };
 
-            DataTable tusuario = this.Select(q,"usuario",campos);
+            DataTable usuarios = this.Select(q,"usuario",campos);
 
-            MessageBox.Show(tusuario.ToString());
+            if (usuarios.Rows.Count == 1)
+            {
+                r = true;
+                this.nombre = usuarios.Rows[0]["nombre"].ToString();
+                this.apellido = usuarios.Rows[0]["apellido"].ToString();
+                this.modulon = usuarios.Rows[0]["mosulon"].ToString();
+                this.modulod = usuarios.Rows[0]["modulod"].ToString();
+                this.loggedin = true;
+            }
 
             return r;
         }
