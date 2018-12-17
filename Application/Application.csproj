@@ -6,8 +6,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Prueba1</RootNamespace>
-    <AssemblyName>Prueba1</AssemblyName>
+    <RootNamespace>Application</RootNamespace>
+    <AssemblyName>Application</AssemblyName>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <TargetFrameworkProfile />
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -74,13 +74,14 @@
     <Compile Include="views\ViewFormMdi.cs" />
     <Compile Include="models\ModelFormLogin.cs" />
     <Compile Include="classes\ClassDB.cs" />
+    <Compile Include="classes\ClassApplicationBase.cs" />
+    <Compile Include="classes\ClassLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="views" />
     <Folder Include="controllers\" />
     <Folder Include="views\" />
     <Folder Include="models\" />

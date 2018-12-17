@@ -1,8 +1,7 @@
 ﻿using System.Data;
-using System.Windows.Forms;
-using Prueba1.classes;
+using Application.classes;
 
-namespace Prueba1.models
+namespace Application.models
 {
     public class ModelFormLogin : ClassDB
     {

@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Prueba1.classes
+namespace Application.classes
 {
     public class ClassDB
     {

@@ -1,0 +1,14 @@
+/home/sdominguez/Proyectos/Csharp/Prueba1/Prueba1/obj/Debug/Application.csprojAssemblyReference.cache
+/home/sdominguez/Proyectos/Csharp/Prueba1/Prueba1/obj/Debug/Application.csproj.CoreCompileInputs.cache
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/obj/Debug/Application.csprojAssemblyReference.cache
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/obj/Debug/Application.csproj.CoreCompileInputs.cache
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/bin/Debug/Application.exe.config
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/bin/Debug/Application.exe
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/bin/Debug/Application.pdb
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/bin/Debug/Google.Protobuf.dll
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/bin/Debug/MySql.Data.dll
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/bin/Debug/Google.Protobuf.xml
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/bin/Debug/MySql.Data.xml
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/obj/Debug/Application.csproj.CopyComplete
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/obj/Debug/Application.exe
+/home/sdominguez/Proyectos/Csharp/Prueba1/Application/obj/Debug/Application.pdb

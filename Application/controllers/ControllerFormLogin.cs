@@ -2,9 +2,9 @@
 using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Windows.Forms;
-using Prueba1.models;
+using Application.models;
 
-namespace Prueba1.controllers
+namespace Application.controllers
 {
     public class ControllerFormLogin : Form
 	{
@@ -104,7 +104,6 @@ namespace Prueba1.controllers
 
                     if (this.Model.Login() == true)
                     {
-                        abernis@legislaturajujuy.gov.ar
                         Console.WriteLine("Te has logueado.");
                         this.LblAlert.BackColor = Color.LightGreen;
                         this.LblAlert.Text = "OK: El usuario se ha logueado en el systema.";

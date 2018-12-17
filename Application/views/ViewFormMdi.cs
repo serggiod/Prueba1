@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
-using Prueba1.controllers;
+using Application.controllers;
 
-namespace Prueba1.views
+namespace Application.views
 {
 
 	public class ViewFormMdi : ControllerFormMdi
