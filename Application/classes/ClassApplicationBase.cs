@@ -7,7 +7,7 @@ namespace Application.classes
     {
         public ClassLog Log;
 
-        public void ClassApplicationBase()
+        public ClassApplicationBase()
         {
 
             // Components.

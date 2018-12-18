@@ -1,11 +1,6 @@
 ﻿<Properties StartupConfiguration="{C55BDEB3-3043-45EC-9FBD-7FF6BF5FDF9E}|Default">
   <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Application/Program.cs">
-    <Files>
-      <File FileName="Application/Program.cs" Line="17" Column="38" />
-      <File FileName="Application/classes/ClassApplicationBase.cs" Line="15" Column="13" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
