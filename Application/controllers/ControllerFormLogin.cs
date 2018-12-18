@@ -2,11 +2,12 @@
 using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Windows.Forms;
+using Application.classes;
 using Application.models;
 
 namespace Application.controllers
 {
-    public class ControllerFormLogin : Form
+    public class ControllerFormLogin : ClassApplicationBase
 	{
         protected Point StartLocation;
         protected Label LblTitle;

@@ -1,6 +1,6 @@
 ﻿using System;
 using Sys = System.Windows.Forms;
-using Application.classes;
+using Application.views;
 
 namespace Application
 {
@@ -11,10 +11,10 @@ namespace Application
 		[STAThread]
 		private static void Main(string[] args)
 		{
-            ClassApplicationBase App = new ClassApplicationBase();
+            ViewFormMdi form = new ViewFormMdi();
 
             Sys.Application.EnableVisualStyles();
-            Sys.Application.Run(App);
+            Sys.Application.Run(form);
         }
 
     }

@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
-using Application.views;
 
 namespace Application.classes
 {
     public class ClassApplicationBase : Form
     {
+        public ClassLog Log;
 
-        public string BasePath;
-
-        public ClassApplicationBase()
+        public void ClassApplicationBase()
         {
-            this.BasePath = Environment.CurrentDirectory;
 
-            var form = new ViewFormMdi();
-            form.Show();
+            // Components.
+            this.Log = new ClassLog();
 
         }
     }
