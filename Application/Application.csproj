@@ -86,6 +86,7 @@
     <Folder Include="views\" />
     <Folder Include="models\" />
     <Folder Include="classes\" />
+    <Folder Include="struct\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
