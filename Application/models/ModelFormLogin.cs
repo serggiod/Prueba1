@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using Application.classes;
+using Application.@struct;
 
 namespace Application.models
 {
@@ -38,53 +39,45 @@ namespace Application.models
             this.password = p;
         }
 
-        public bool Login()
+        public DataResponse Login()
         {
-            bool r = false;
+            string sql = string.Empty; 
+            sql += "SELECT ";
+            sql += " jp.per_nombres nombre, ";
+            sql += " jp.per_apellidos apellido, ";
+            sql += " m.modname modulon, ";
+            sql += " m.moddesc modulod ";
+            sql += "FROM ";
+            sql += " modules m ";
+            sql += "INNER JOIN ";
+            sql += " usermod um ON um.modid = m.id ";
+            sql += "INNER JOIN ";
+            sql += " usuarios u ON u.id = um.userid ";
+            sql += "INNER JOIN ";
+            sql += " jujuy_usuarios ju ON ju.per_cuil = u.per_cuil ";
+            sql += "INNER JOIN ";
+            sql += " jujuy_personas jp ON jp.per_cuil = ju.per_cuil ";
+            sql += "WHERE ";
+            sql += " m.modlink = '" + this.modulel + "' ";
+            sql += " AND ju.per_cuil = '" + this.cuil + "' ";
+            sql += " AND ju.usu_pass = '" + this.password + "' ";
+            sql += " AND u.estado = " + this.estado;
+            sql += " AND ju.usu_estado = " + this.estado;
 
-            string q = string.Empty; 
-            q += "SELECT ";
-            q += " jp.per_nombres nombre, ";
-            q += " jp.per_apellidos apellido, ";
-            q += " m.modname modulon, ";
-            q += " m.moddesc modulod ";
-            q += "FROM ";
-            q += " modules m ";
-            q += "INNER JOIN ";
-            q += " usermod um ON um.modid = m.id ";
-            q += "INNER JOIN ";
-            q += " usuarios u ON u.id = um.userid ";
-            q += "INNER JOIN ";
-            q += " jujuy_usuarios ju ON ju.per_cuil = u.per_cuil ";
-            q += "INNER JOIN ";
-            q += " jujuy_personas jp ON jp.per_cuil = ju.per_cuil ";
-            q += "WHERE ";
-            q += " m.modlink = '" + this.modulel + "' ";
-            q += " AND ju.per_cuil = '" + this.cuil + "' ";
-            q += " AND ju.usu_pass = '" + this.password + "' ";
-            q += " AND u.estado = " + this.estado;
-            q += " AND ju.usu_estado = " + this.estado;
+            DataResponse response = this.Select(sql);
 
-            string[] campos = new string[] {
-                "nombre",
-                "apellido",
-                "modulon",
-                "modulod"
-            };
-
-            DataTable usuarios = this.Select(q,"usuario",campos);
-
-            if (usuarios.Rows.Count == 1)
+            if (response.result == true)
             {
-                r = true;
-                this.nombre = usuarios.Rows[0]["nombre"].ToString();
-                this.apellido = usuarios.Rows[0]["apellido"].ToString();
-                this.modulon = usuarios.Rows[0]["mosulon"].ToString();
-                this.modulod = usuarios.Rows[0]["modulod"].ToString();
-                this.loggedin = true;
+                if (response.rows.Rows.Count == 1)
+                {
+                    this.nombre = response.rows.Rows[0]["nombre"].ToString();
+                    this.apellido = response.rows.Rows[0]["apellido"].ToString();
+                    this.modulon = response.rows.Rows[0]["mosulon"].ToString();
+                    this.modulod = response.rows.Rows[0]["modulod"].ToString();
+                    this.loggedin = true;
+                }
             }
-
-            return r;
+            return response;
         }
 
         public bool Logout()

@@ -14,7 +14,7 @@ namespace Application.views
 			this.WindowState = FormWindowState.Maximized;
 
             this.Log.Success("Se ha iniciado la aplicación.");
-            // Eventos.
+
             //var FormLogin = new ViewFormLogin();
             //FormLogin.Parent = this;
             //FormLogin.Show();

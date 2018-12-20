@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Application.classes;
 using Application.models;
+using Application.@struct;
 
 namespace Application.controllers
 {
@@ -103,7 +104,8 @@ namespace Application.controllers
                     this.Model.SetCuil(this.TxbUsr.Text);
                     this.Model.SetPassword(this.TxbPass.Text);
 
-                    if (this.Model.Login() == true)
+                    DataResponse login = this.Model.Login();
+                    if (login.result == true)
                     {
                         Console.WriteLine("Te has logueado.");
                         this.LblAlert.BackColor = Color.LightGreen;

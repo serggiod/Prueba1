@@ -76,6 +76,7 @@
     <Compile Include="classes\ClassDB.cs" />
     <Compile Include="classes\ClassApplicationBase.cs" />
     <Compile Include="classes\ClassLog.cs" />
+    <Compile Include="struct\DataResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
